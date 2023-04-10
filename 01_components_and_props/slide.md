@@ -5,7 +5,6 @@ presentation:
   controls: false
 ---
 
-<!-- slide -->
 
 <h2> 🚗 React Roadmap
 
@@ -17,23 +16,34 @@ The goals for Phase 2: </h2>
 
 - Add side effects and data fetching to communicate with a server (Network Communication)
 
-<!-- slide -->
 
-<h1> Components and Props </h1>
+---
 
-<!-- slide -->
+<h2> Components and Props </h2>
 
-<h2> ✅ Objectives </h2>
+<!-- slide style="text-align: left;" -->
 
-✳️ Discuss the benefits of React over Vanilla JS
-✳️ Explain the importance of Components
-✳️ Practice writing components
-✳️ Define props and how to create them
-✳️ Recognize destructured props and how to work with them
-✳️ Recognize best practices when writing components and props
-✳️ Render multiple components from a list
+<h3 style="text-align: center;"> ✅ Objectives </h3>
 
-<!-- slide -->
++ Discuss the benefits of React over Vanilla JS
++ Explain the importance of Components
++ Practice writing components
++ Define props and how to create them
++ Recognize destructured props and how to work with them
+
+
+--
+
+<h2> Components and Props </h2>
+
+<!-- slide style="text-align: left;" -->
+
+<h3 style="text-align: center;"> ✅ Objectives </h3>
+
++ Recognize destructured props and how to work with them
++ Render multiple components from a list
+
+---
 
 <h2> 💡 React Philosophy </h2>
 
@@ -43,10 +53,13 @@ The goals for Phase 2: </h2>
 - Use components to break down complex UI into smaller pieces which creates a better separation of concerns
 - Easier to maintain
 
-<!-- slide -->
+
+---
 
 <h2> React > Vanilla JS </h2>
 
+<div style="display: flex; gap: 2rem;">
+<div>
 Instead of describing how to do something:
 
 ```js
@@ -66,111 +79,59 @@ const h1 = (
 );
 ```
 
-<!-- slide -->
+</div>
+<div style="display: flex; flex-direction: column; justify-content: center;">
+  In both cases, we'll get something like this:
 
-<h2> ⚙️ Components </h2>
+  ```html
+  <h1 id="main" class="blue">
+    Hello!
+  </h1>
+  ```
 
-<p>
+</div>
+</div>
 
-Components are the building blocks of React. A component is a function that:
 
-- Takes in some raw data (props)
-- Returns user interface (JSX)
-
-</p>
-
-```js
-const Header = () => {
-  return (
-    <div>
-      <h3>Hello World</h3>
-    </div>
-  );
-};
-
-ReactDOM.render(<Header />, document.getElementById("root"));
-```
-
-<!-- slide -->
-
-<h2> ⚙️ Component Gotchas </h2>
-
-This is okay:
-
-```js
-function Card() {
-  return (
-    <div id="card1" className="card">
-      <h1>hi</h1>
-      <p>wassup?</p>
-    </div>
-  );
-}
-```
-
-This is NOT okay:
-
-```js
-function card() {
-  return (
-    <h1>hi</h1>
-    <p>wassup?</p>
-  )
-}
-```
-
-- Component name needs to be capitalized
-- Components can only return one element
-
-<!-- slide -->
-
-<h2> 🎩 Props! </h2>
-
-When you create components, one way to make them dynamic and reusable is by passing in props. For example, if we wanted to create several cards on our page using a Card component, we could do so like this:
-
-```js
-function Card(props) {
-  return (
-    <div id="card1" className="card">
-      <h1>{props.greeting}</h1>
-      <p>{props.subGreeting}</p>
-    </div>
-  );
-}
-
-// Inside another component
-
-return (
-  <div>
-    <Card greeting="hi" subGreeting="hello" />
-    <Card greeting="sup" subGreeting="what's up" />
-  </div>
-);
-```
-
-<!-- slide -->
-
-<h2> 🎩 Props Continued </h2>
-
-The props argument in our Card component defines an object that React will pass to our function when it is called, and it will use whatever attributes we add to our JSX component as key-value pairs on that props object.
-
-For example, if we were to add a console.log in the Card component above, we'd end up seeing this object:
-
-```js
-function Card(props) {
-  console.log(props); // => { greeting: "hi", subGreeting: "hello" }
-
-  return (
-    <div id="card1" className="card">
-      <h1>{props.greeting}</h1>
-      <p>{props.subGreeting}</p>
-    </div>
-  );
-}
-```
-
-<!-- slide -->
+---
 
 <h2> Wireframes </h2>
 
-<img src="https://res.cloudinary.com/dnocv6uwb/image/upload/v1643721399/wireframe_bfc35e.png">
+<div style="display: flex; flex-direction: row;">
+  <div>
+    <img width="1400px" src="https://res.cloudinary.com/dnocv6uwb/image/upload/v1643721399/wireframe_bfc35e.png">
+  </div>
+
+  <div style="font-size: 1.95rem; margin-top: 0.85rem;">
+    What components could we use to build this app?
+
+<textarea style="font-size: 2rem; border: 2px solid black; padding: 1rem;" rows="10" cols="25"></textarea>    
+  </div>
+</div>
+
+
+
+
+---
+
+
+## Let's Dive into the code!
+
+- package.json
+- node_modules
+- public
+- src/index.js
+- src/App.js
+
+
+---
+
+## Sneak Peak at where we're going
+
+Run the following command from `01_components_and_props/project_showcase`
+```bash
+npm run server
+```
+
+Then click the button below to open the app
+<button>[Project Showcase App](https://phase-2-react-project-showcase.netlify.app/projects)</button>
