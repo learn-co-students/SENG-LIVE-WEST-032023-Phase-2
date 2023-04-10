@@ -133,6 +133,10 @@ The props argument in our Card component defines an object that React will pass 
 - [Webpack](https://webpack.js.org/)
 - [Quick intro to Webpack](https://medium.com/the-self-taught-programmer/what-is-webpack-and-why-should-i-care-part-1-introduction-ca4da7d0d8dc)
 
+### View slides in browser
+
+- [01 Components and Props Slides](https://raw.githack.com/learn-co-students/SENG-LIVE-WEST-032023-Phase-2/01_components_and_props/01_components_and_props/docs/index.html)
+
 ### VSCode extensions
 
 - [draw.io integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
