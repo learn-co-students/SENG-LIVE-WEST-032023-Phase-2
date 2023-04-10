@@ -1,8 +1,8 @@
-const ProjectListItem = (props) => {
-    console.log("🚀 ~ file: ProjectListItem.jsx:2 ~ ProjectListItem ~ props:", props)
+const ProjectListItem = ({ project }) => {
+    console.log("🚀 ~ file: ProjectListItem.jsx:2 ~ ProjectListItem ~ props:", project)
     return (
         <li className="card">
-            {/* <figure className="image">
+            <figure className="image">
                 <img src={project.image} alt={`${project.name} app`} />
             </figure>
             <section className="details">
@@ -12,7 +12,9 @@ const ProjectListItem = (props) => {
             </section>
             <footer className="extra">
                 <span className="badge blue">Phase {project.phase}</span>
-            </footer> */}
+            </footer>
         </li>
     )
 }
+
+export default ProjectListItem
