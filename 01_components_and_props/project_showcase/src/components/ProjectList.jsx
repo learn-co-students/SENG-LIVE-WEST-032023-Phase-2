@@ -16,7 +16,8 @@ console.log("🚀 ~ file: ProjectList.jsx:2 ~ projects:", projects)
 const ProjectList = () => {
 
   const projectListItems = projects.map(projectObj => {
-    return <ProjectListItem key={projectObj.id} project={projectObj} />
+    return <ProjectListItem key={projectObj.id} project={projectObj} /> // Note: rendering this component is equivalent to 
+                                                                        // calling the function ProjectListItem({key: projectObj.id, project: projectObj})
   })
 
     return (

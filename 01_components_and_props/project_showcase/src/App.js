@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* above is = to calling the function Header({user: "Lantz"}) */}
+      {/* above is = to calling the function Header() */}
       <ProjectForm />
       <ProjectList />
     </div>);
